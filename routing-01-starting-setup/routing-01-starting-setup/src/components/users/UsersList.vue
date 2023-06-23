@@ -1,5 +1,5 @@
 <template>
-  <button @click="confirmInput">Confirm</button>
+  <button @click="DoSomething">Confirm</button>
   <ul>
     <user-item
       v-for="user in users"
@@ -19,9 +19,10 @@ export default {
   },
   inject: ['users'],
   methods: {
-    confirmInput() {
-      // dynamically navigate to the teams page. Pushing the route to the route stack. Programmatic navigation.
-      this.$router.push('/teams');
+    DoSomething() {
+      // console.log(this.users);
+      // This will push a new route to the router history
+      this.$router.push('/teams'); // This will push a new route to the router history
     },
   },
 };

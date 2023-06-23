@@ -8,13 +8,23 @@
         </li>
         <li>
           <!-- <button @click="setActivePage('users-list')">Users</button> -->
-          <!-- router-link internally uses slots. And under the hood it will render as an anchor tag -->
           <router-link to="/users">Users</router-link>
         </li>
       </ul>
     </nav>
   </header>
 </template>
+
+<!-- <script>
+export default {
+  emits: ['set-page'],
+  methods: {
+    setActivePage(page) {
+      this.$emit('set-page', page);
+    },
+  },
+};
+</script> -->
 
 <style scoped>
 header {

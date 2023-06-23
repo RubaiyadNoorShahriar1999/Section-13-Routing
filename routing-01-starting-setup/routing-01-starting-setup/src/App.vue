@@ -1,10 +1,7 @@
 <template>
   <the-navigation></the-navigation>
   <main>
-    <!-- We are no longer using dynamic component -->
     <!-- <component :is="activePage"></component> -->
-
-    <!-- Instead, we are using named router views -->
     <router-view></router-view>
   </main>
 </template>
@@ -22,6 +19,7 @@ export default {
   },
   data() {
     return {
+      // activePage: 'teams-list',
       teams: [
         { id: 't1', name: 'Frontend Engineers', members: ['u1', 'u2'] },
         { id: 't2', name: 'Backend Engineers', members: ['u1', 'u2', 'u3'] },
@@ -42,6 +40,11 @@ export default {
       users: this.users,
     };
   },
+  // methods: {
+  //   setActivePage(page) {
+  //     this.activePage = page;
+  //   },
+  // },
 };
 </script>
 
