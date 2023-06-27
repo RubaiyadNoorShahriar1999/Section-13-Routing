@@ -30,7 +30,29 @@ const route = createRouter({
     { path: '/:notFound(.*)', component: NotFound },
   ],
   linkActiveClass: 'active',
+  scrollBehavior(to, from, savedPosition) {
+    // We can not uncomment it or else it will show variables not used error
+    console.log(to, from, savedPosition);
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { left: 0, top: 0 };
+  },
 });
+
+route.beforeEach(function (to, from, next) {
+  console.log('Global beforeEach');
+  console.log(to, from);
+  next();
+  // next(false);
+  // next('/users');
+  // if (to.name === 'team-members') {
+  //   next();
+  // } else {
+  //   next({ name: 'team-members', params: { teamId: 't2' } });
+  // }
+});
+
 const app = createApp(App);
 app.use(route);
 
