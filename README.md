@@ -3,7 +3,21 @@ Routing in Vue 3
 
 <h2>Section 13 contains:</h2>
 
-     1. Running...
+     1. Routing setup
+     2. Registering and Rendering Routes
+     3. Navigation with Router Links
+     4. Dynamic paths
+     5. Params Data and Watchers
+     6. Passing params as props
+     7. Nested Routes
+     8. Query Params
+     9. Named Routes
+     10. Rendering multiple routes
+     11. Scroll beahviour
+     12. Navigation guards
+     13. "afterEach" hooks
+     14. Route leave guards
+     15. Route Metadata
 
 <h2>To run this project</h2>
 
